@@ -1,0 +1,19 @@
+.homepage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(345px, 1fr)); /* Responsive grid */
+  gap: 16px;
+  padding: 16px;
+  justify-content: center;
+}
+
+/* Remove bullets and margin for <ul> */
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+/* Optionally, you can add more styling for the list items, e.g. */
+li {
+  /* Here you can adjust how the list items behave inside the grid */
+}
