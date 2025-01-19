@@ -12,9 +12,12 @@ const HomePage = () => {
     //   ))} */}
     //   <ProductPage/>
     // </div>
-    <>
-    <ProductPage/>
-    </>
+    // <>
+    
+    // </>
+    <h1>
+      Home Page 
+    </h1>
   );
 };
 

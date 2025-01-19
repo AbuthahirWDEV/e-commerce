@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 
-const ProductCard = ({ products }) => {
+const ProductCard = ({ products, onAddCart }) => {
   const handleClick = () => {
     toast(`${products.name} Added to cart`);
+    onAddCart(products);
   };
   return (
     <div className="card-container">
@@ -20,7 +21,7 @@ const ProductCard = ({ products }) => {
         </div>
         Add to cart
       </button>
-      <ToastContainer />
+      <ToastContainer autoClose={2000} closeOnClick={false} rtl={false} />
     </div>
   );
 };
