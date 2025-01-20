@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# E-Commerce List Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an interactive e-commerce list page with animations that enhance the user experience. The project implements features such as product listing, smooth animations, pagination, loading skeletons, and more.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Product Listing Grid**: Displays products in a responsive grid layout. Each product card includes an image, name, price, and an "Add to Cart" button.
+  
+- **Animations**:
+  - **Hover Effect**: Product cards animate on hover with a slight scale-up and shadow effect.
+  - **Loading Animation**: A skeleton loader is shown when the page is loading or fetching products.
+  - **Add to Cart Button**: The "Add to Cart" button has a click ripple effect, and a subtle cart icon animation appears when clicked.
+  - **Filter/Sort Animation**: Smooth transition when filters or sorting options are applied.
 
-### `npm start`
+- **Pagination**: Product listings are paginated, and users can navigate between pages. Pagination is implemented to manage the loading of products and create a smooth user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Toast Notification**: Displays a notification when a product is added to the cart.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Filters and Sorting**:
+  - Create a filter bar with options such as category and price range.
+  - Add sorting options such as "Price: Low to High."
 
-### `npm test`
+## Technical Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Technologies**:
+  - HTML, CSS, and JavaScript
+  - React.js (for the dynamic rendering of product cards and managing state)
+  - Material-UI for Pagination and Skeleton Loading
+  - React Icons for the shopping cart icon
+  - React-Toastify for displaying notifications
+  
+- **Animations**: 
+  - Implemented using CSS transitions, keyframes, and Material-UI Skeleton for loading effects.
 
-### `npm run build`
+- **Responsive Design**: The layout is responsive for mobile, tablet, and desktop views.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Explanation of Animation Choices
+1. Hover Effect on Product Cards:
+The hover effect scales up the product cards slightly and adds a shadow to give a subtle interactive feel when users hover over a product.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Skeleton Loader:
+A skeleton loader is shown when the page is fetching the product data to improve user experience during loading times. It simulates the shape of the content to let users know that data is being loaded.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Add to Cart Button:
+The button has a ripple effect when clicked, followed by a cart icon animation to provide a visually engaging interaction. This animation draws attention to the user's action of adding an item to the cart.
 
-### `npm run eject`
+4. Pagination for Lazy Loading of Products:
+Pagination is implemented to load products in pages, which improves performance and user experience by avoiding long lists of products. Users can smoothly navigate between pages to see different products.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

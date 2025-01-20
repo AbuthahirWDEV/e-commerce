@@ -1,0 +1,99 @@
+/* Base styles for product card */
+.card-container {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styles for image */
+  .image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-container:hover .image {
+    opacity: 0.9;
+  }
+  
+  /* Contents styles (name, description, price) */
+  .contents {
+    padding: 15px;
+  }
+  
+  .contents h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .contents p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .contents span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Button styles with ripple animation */
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .btn:hover {
+    background-color: #e75c51;
+  }
+  
+  /* Ripple effect */
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    pointer-events: none;
+    animation: ripple 0.6s linear;
+  }
+  
+  @keyframes ripple {
+    to {
+      width: 50px;
+      height: 50px;
+      opacity: 0;
+    }
+  }
+  
+  .btn:active::after {
+    animation: ripple 0.6s linear;
+  }
+  
+
+  

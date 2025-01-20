@@ -5,6 +5,15 @@
     padding: 16px;
     justify-content: center;
   }
+  .homepage-grid .MuiCard-root {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .homepage-grid .MuiCard-root:hover {
+    transform: scale(1.05); /* Slightly scale up the card */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
   
   /* Remove bullets and margin for <ul> */
   ul {

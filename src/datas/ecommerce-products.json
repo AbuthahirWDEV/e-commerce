@@ -3,13 +3,15 @@
     "id": 1,
     "name": "Wireless Headphones",
     "price": 59.99,
+    "category": "Electronics",
     "short_description": "Noise-cancelling wireless headphones with a sleek design.",
-    "image": "https://images.pexels.com/photos/3621177/pexels-photo-3621177.jpeg"
+    "image": "/assets/images/product1.jpg"
   },
   {
     "id": 2,
     "name": "Smartwatch",
     "price": 199.99,
+    "category": "Wearables",
     "short_description": "Track your health and fitness with this advanced smartwatch.",
     "image": "https://images.pexels.com/photos/6348395/pexels-photo-6348395.jpeg"
   },
@@ -17,6 +19,7 @@
     "id": 3,
     "name": "Bluetooth Speaker",
     "price": 89.99,
+    "category": "Electronics",
     "short_description": "Portable Bluetooth speaker with clear sound quality and deep bass.",
     "image": "https://images.pexels.com/photos/1580102/pexels-photo-1580102.jpeg"
   },
@@ -24,6 +27,7 @@
     "id": 4,
     "name": "Laptop Backpack",
     "price": 45.99,
+    "category": "Accessories",
     "short_description": "Durable and stylish backpack for your laptop and accessories.",
     "image": "https://images.pexels.com/photos/1058551/pexels-photo-1058551.jpeg"
   },
@@ -31,6 +35,7 @@
     "id": 5,
     "name": "Smartphone",
     "price": 799.99,
+    "category": "Electronics",
     "short_description": "High-performance smartphone with advanced camera and display.",
     "image": "https://images.pexels.com/photos/3139823/pexels-photo-3139823.jpeg"
   },
@@ -38,6 +43,7 @@
     "id": 6,
     "name": "Tablet",
     "price": 349.99,
+    "category": "Electronics",
     "short_description": "Lightweight and portable tablet for work and entertainment.",
     "image": "https://images.pexels.com/photos/5480903/pexels-photo-5480903.jpeg"
   },
@@ -45,6 +51,7 @@
     "id": 7,
     "name": "Smartphone Case",
     "price": 19.99,
+    "category": "Accessories",
     "short_description": "Protective and stylish case for your smartphone.",
     "image": "https://images.pexels.com/photos/6501513/pexels-photo-6501513.jpeg"
   },
@@ -52,6 +59,7 @@
     "id": 8,
     "name": "Wireless Mouse",
     "price": 25.99,
+    "category": "Accessories",
     "short_description": "Ergonomic wireless mouse for smooth navigation.",
     "image": "https://images.pexels.com/photos/2764674/pexels-photo-2764674.jpeg"
   },
@@ -59,6 +67,7 @@
     "id": 9,
     "name": "Gaming Keyboard",
     "price": 129.99,
+    "category": "Accessories",
     "short_description": "Mechanical keyboard with customizable RGB lighting.",
     "image": "https://images.pexels.com/photos/1060625/pexels-photo-1060625.jpeg"
   },
@@ -66,6 +75,7 @@
     "id": 10,
     "name": "Portable SSD",
     "price": 119.99,
+    "category": "Electronics",
     "short_description": "Fast and compact portable SSD for storing large files.",
     "image": "https://images.pexels.com/photos/1449120/pexels-photo-1449120.jpeg"
   },
@@ -73,6 +83,7 @@
     "id": 11,
     "name": "Fitness Tracker",
     "price": 49.99,
+    "category": "Wearables",
     "short_description": "Wearable fitness tracker with heart rate monitoring.",
     "image": "https://images.pexels.com/photos/617151/pexels-photo-617151.jpeg"
   },
@@ -80,6 +91,7 @@
     "id": 12,
     "name": "Digital Camera",
     "price": 499.99,
+    "category": "Electronics",
     "short_description": "Capture stunning photos and videos with this digital camera.",
     "image": "https://images.pexels.com/photos/332932/pexels-photo-332932.jpeg"
   },
@@ -87,6 +99,7 @@
     "id": 13,
     "name": "Smart Light Bulb",
     "price": 29.99,
+    "category": "Home Appliances",
     "short_description": "Control the lighting in your home with this smart light bulb.",
     "image": "https://images.pexels.com/photos/1812966/pexels-photo-1812966.jpeg"
   },
@@ -94,6 +107,7 @@
     "id": 14,
     "name": "Electric Kettle",
     "price": 34.99,
+    "category": "Home Appliances",
     "short_description": "Boil water quickly with this stylish electric kettle.",
     "image": "https://images.pexels.com/photos/2031663/pexels-photo-2031663.jpeg"
   },
@@ -101,6 +115,7 @@
     "id": 15,
     "name": "Wireless Earbuds",
     "price": 89.99,
+    "category": "Electronics",
     "short_description": "High-quality sound with wireless convenience.",
     "image": "https://images.pexels.com/photos/3763570/pexels-photo-3763570.jpeg"
   }

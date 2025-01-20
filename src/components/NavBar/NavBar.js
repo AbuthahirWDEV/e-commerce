@@ -5,16 +5,15 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import ProductPage from "../Productpage/ProductPage";
 import HomePage from "../Homepage/HomePage";
 import { useNavigate } from "react-router-dom";
+import { Select, MenuItem, ListSubheader } from "@mui/material";
 
-const Navbar = ({ cartProducts ,setSearchTerm}) => {
+const Navbar = ({ cartProducts, setSearchTerm }) => {
   const navigate = useNavigate();
   const [filter, setFilter] = React.useState("");
 
@@ -22,11 +21,9 @@ const Navbar = ({ cartProducts ,setSearchTerm}) => {
     setFilter(event.target.value);
   };
 
-
   const handleCartPage = () => {
     navigate("/cart"); // Navigate to the cart page (if you have one)
   };
-  
 
   const handleProduct = () => {
     console.log("prod");
@@ -72,7 +69,9 @@ const Navbar = ({ cartProducts ,setSearchTerm}) => {
             <Button color="inherit" onClick={handleProduct}>
               Product
             </Button>
-            <Button color="inherit" onClick={handleCartPage}>Cart</Button>
+            <Button color="inherit" onClick={handleCartPage}>
+              Cart
+            </Button>
           </Box>
           {/* Search Bar */}
           <TextField
@@ -83,6 +82,7 @@ const Navbar = ({ cartProducts ,setSearchTerm}) => {
             onChange={handleSearch}
           />
           {/* Filter Dropdown */}
+
           <Select
             value={filter}
             onChange={handleFilterChange}

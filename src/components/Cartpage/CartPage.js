@@ -46,6 +46,7 @@ const CartItemActions = styled.div`
 `;
 
 const CartPage = ({ cartProducts, onAddCart, removeFromCart, handleDecreaseQuantity }) => {
+  // Calculate total price of cart
   const totalPrice = cartProducts.reduce((acc, product) => acc + product.price * product.quantity, 0).toFixed(2);
 
   return (
@@ -53,45 +54,58 @@ const CartPage = ({ cartProducts, onAddCart, removeFromCart, handleDecreaseQuant
       <Typography variant="h4" gutterBottom>
         Your Cart
       </Typography>
-      <CartContainer>
-        {cartProducts.map((product) => (
-          <CartCard key={product.id}>
-            <CardMedia
-              component="img"
-              image={product.image}
-              alt={product.name}
-              sx={{ width: 80, height: 80, objectFit: 'cover' }}
-            />
-            <CartItemDetails>
-              <Typography variant="h6">{product.name}</Typography>
-              <Typography variant="body2">Price: ${product.price}</Typography>
-              <Typography variant="body2">Quantity: {product.quantity}</Typography>
-              <Typography variant="body2">Total: ${(product.price * product.quantity).toFixed(2)}</Typography>
-            </CartItemDetails>
-            <CartItemActions>
-              <div>
-                <IconButton onClick={() => removeFromCart(product.id)} color="secondary">
-                  <DeleteIcon />
-                </IconButton>
-              </div>
-              <div>
-                <IconButton onClick={() => handleDecreaseQuantity(product.id)} color="primary">
-                  <RemoveIcon />
-                </IconButton>
-                <IconButton onClick={() => onAddCart(product)} color="primary">
-                  <AddIcon />
-                </IconButton>
-              </div>
-            </CartItemActions>
-          </CartCard>
-        ))}
-      </CartContainer>
-      <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between', width: '80%', maxWidth: '800px' }}>
-        <Typography variant="h6" gutterBottom>Total Price: ${totalPrice}</Typography>
-        <Button variant="contained" color="primary">
-          Buy Now
-        </Button>
-      </div>
+
+      {cartProducts.length === 0 ? (
+        // Display empty cart message
+        <Typography variant="h6" color="textSecondary">
+          Your cart is empty
+        </Typography>
+      ) : (
+        // Cart items are displayed if there are products
+        <CartContainer>
+          {cartProducts.map((product) => (
+            <CartCard key={product.id}>
+              <CardMedia
+                component="img"
+                image={product.image}
+                alt={product.name}
+                sx={{ width: 80, height: 80, objectFit: 'cover' }}
+              />
+              <CartItemDetails>
+                <Typography variant="h6">{product.name}</Typography>
+                <Typography variant="body2">Price: ${product.price}</Typography>
+                <Typography variant="body2">Quantity: {product.quantity}</Typography>
+                <Typography variant="body2">Total: ${(product.price * product.quantity).toFixed(2)}</Typography>
+              </CartItemDetails>
+              <CartItemActions>
+                <div>
+                  <IconButton onClick={() => removeFromCart(product.id)} color="secondary">
+                    <DeleteIcon />
+                  </IconButton>
+                </div>
+                <div>
+                  <IconButton onClick={() => handleDecreaseQuantity(product.id)} color="primary">
+                    <RemoveIcon />
+                  </IconButton>
+                  <IconButton onClick={() => onAddCart(product)} color="primary">
+                    <AddIcon />
+                  </IconButton>
+                </div>
+              </CartItemActions>
+            </CartCard>
+          ))}
+        </CartContainer>
+      )}
+
+      {/* Total Price and Buy Now Button */}
+      {cartProducts.length > 0 && (
+        <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between', width: '80%', maxWidth: '800px' }}>
+          <Typography variant="h6" gutterBottom>Total Price: ${totalPrice}</Typography>
+          <Button variant="contained" color="primary">
+            Buy Now
+          </Button>
+        </div>
+      )}
     </Wrapper>
   );
 };
