@@ -1,6 +1,6 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import './ProductCard.css'; // Ensure you have an external CSS file to handle the styles
 
 const ProductCard = ({ products, onAddCart }) => {
@@ -23,7 +23,6 @@ const ProductCard = ({ products, onAddCart }) => {
         </div>
         Add to cart
       </button>
-      <ToastContainer autoClose={2000} closeOnClick={false} rtl={false} />
     </div>
   );
 };

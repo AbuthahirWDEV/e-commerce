@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Pagination, Skeleton } from "@mui/material"; // Import Skeleton for loading animation
-import ProductCard from "../ProductCard"; // Import your ProductCard component
+import ProductCard from "../ProductCard/ProductCard"; // Import your ProductCard component
 import productData from "../../datas/ecommerce-products.json"; // Your product data source
 import "./ProductPage.css";
 
@@ -39,7 +39,7 @@ const ProductPage = ({ onAddCart, searchTerm }) => {
     const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
     setProducts(paginatedProducts);
     setLoading(false);
-    
+
     setTimeout(() => {
       setProducts(paginatedProducts);
       setLoading(false); // Set loading to false after the delay
@@ -59,23 +59,21 @@ const ProductPage = ({ onAddCart, searchTerm }) => {
       ) : (
         <>
           <div className="homepage-grid">
-            {loading ? (
-              // Show Skeleton loaders while products are loading
-              Array.from({ length: itemsPerPage }).map((_, index) => (
-                <div key={index} className="product-card-skeleton">
-                  <Skeleton variant="rectangular" width={210} height={300} />
-                  <Skeleton width="60%" />
-                  <Skeleton width="40%" />
-                </div>
-              ))
-            ) : (
-              // Show the actual products once loading is finished
-              products.map((product) => (
-                <div key={product.id}>
-                  <ProductCard products={product} onAddCart={onAddCart} />
-                </div>
-              ))
-            )}
+            {loading
+              ? // Show Skeleton loaders while products are loading
+                Array.from({ length: itemsPerPage }).map((_, index) => (
+                  <div key={index} className="product-card-skeleton">
+                    <Skeleton variant="rectangular" width={210} height={300} />
+                    <Skeleton width="60%" />
+                    <Skeleton width="40%" />
+                  </div>
+                ))
+              : // Show the actual products once loading is finished
+                products.map((product) => (
+                  <div key={product.id}>
+                    <ProductCard products={product} onAddCart={onAddCart} />
+                  </div>
+                ))}
           </div>
           <div>
             <Pagination

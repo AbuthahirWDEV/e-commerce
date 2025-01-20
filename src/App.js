@@ -4,6 +4,7 @@ import HomePage from "./components/Homepage/HomePage";
 import ProductPage from "./components/Productpage/ProductPage";
 import NavBar from "./components/NavBar/NavBar";
 import CartPage from "./components/Cartpage/CartPage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [cartProducts, setCartProducts] = useState([]);
@@ -48,6 +49,7 @@ function App() {
   return (
     <Router>
       <NavBar setSearchTerm={setSearchTerm} />
+      <ToastContainer autoClose={2000} closeOnClick={false} rtl={false} />
       <Routes>
         {/* Define route for HomePage */}
         <Route path="/" element={<HomePage />} />

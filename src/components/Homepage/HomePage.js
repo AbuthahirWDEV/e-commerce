@@ -1,6 +1,6 @@
 import React from "react";
-import "./HomePage.css"; 
-import ProductCard from "../ProductCard";
+import "./HomePage.css";
+import ProductCard from "../ProductCard/ProductCard";
 import productData from "../../datas/ecommerce-products.json";
 import ProductPage from "../Productpage/ProductPage";
 
@@ -13,11 +13,9 @@ const HomePage = () => {
     //   <ProductPage/>
     // </div>
     // <>
-    
+
     // </>
-    <h1>
-      Home Page 
-    </h1>
+    <h1>Home Page</h1>
   );
 };
 
